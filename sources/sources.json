@@ -1,0 +1,1311 @@
+[
+  {
+    "assumptions": [
+      "Local stochastic Pauli error model with repeated syndrome extraction.",
+      "Large-lattice scaling is used to define an accuracy threshold."
+    ],
+    "authors": [
+      "Eric Dennis",
+      "Alexei Kitaev",
+      "Andrew Landahl",
+      "John Preskill"
+    ],
+    "citation": "Dennis, E., Kitaev, A., Landahl, A., & Preskill, J. (2002). Topological quantum memory. Journal of Mathematical Physics, 43(9), 4452-4505. https://doi.org/10.1063/1.1499754",
+    "claims": [
+      "Topological codes suppress logical error exponentially in linear system size below threshold.",
+      "Fault-tolerant syndrome extraction can preserve encoded information despite measurement noise."
+    ],
+    "conclusions": [
+      "The threshold picture for surface/toric-code style memories is theoretically well founded.",
+      "Decoding performance can be studied through statistical-mechanics mappings."
+    ],
+    "contributions": [
+      "Established a threshold theorem for topological memory based on homological decoding.",
+      "Connected logical failure to phase transitions in associated statistical-mechanical models."
+    ],
+    "future_work": [
+      "Extend threshold analysis to more realistic noise and syndrome-extraction circuits.",
+      "Develop practical decoders approaching the optimal threshold."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "The work is foundational rather than specialized to dephasing-biased circuit-level noise.",
+      "Realistic gate decompositions and modern decoder engineering are outside scope."
+    ],
+    "source_type": "paper",
+    "summary": "Foundational threshold paper for topological codes. It maps storage under local noise to statistical-mechanical models and explains why increasing distance suppresses logical failure below threshold, which anchors later surface-code threshold estimates.",
+    "title": "Topological quantum memory",
+    "url": "https://doi.org/10.1063/1.1499754",
+    "year": 2002
+  },
+  {
+    "assumptions": [
+      "Quantum memory noise is mapped to a disordered lattice gauge theory.",
+      "Threshold is identified from asymptotic phase behavior rather than finite-size experiments."
+    ],
+    "authors": [
+      "Chenyang Wang",
+      "John Harrington",
+      "John Preskill"
+    ],
+    "citation": "Wang, C., Harrington, J., & Preskill, J. (2003). Confinement-Higgs transition in a disordered gauge theory and the accuracy threshold for quantum memory. Annals of Physics, 303(1), 31-58. https://doi.org/10.1016/S0003-4916(02)00019-2",
+    "claims": [
+      "A phase boundary in the associated gauge model corresponds to the memory threshold.",
+      "The mapping is robust enough to include imperfect syndrome information."
+    ],
+    "conclusions": [
+      "Threshold estimation can be grounded in analytic phase-transition arguments.",
+      "The paper supports later comparisons between Monte Carlo threshold fits and theory."
+    ],
+    "contributions": [
+      "Linked toric-code accuracy thresholds to confinement-Higgs transitions.",
+      "Provided a formal route for deriving thresholds from disorder-induced phase diagrams."
+    ],
+    "future_work": [
+      "Adapt the mapping to asymmetric and correlated noise.",
+      "Bridge analytic threshold arguments to finite-size simulation observables."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not specialized to biased Pauli channels or realistic gate schedules.",
+      "Finite-distance logical-rate predictions are not the focus."
+    ],
+    "source_type": "paper",
+    "summary": "This paper sharpens the statistical-mechanics mapping behind toric-code thresholds, giving a disorder-driven phase-transition view of accuracy thresholds that later biased-noise studies inherit when comparing analytical and numerical thresholds.",
+    "title": "Confinement-Higgs transition in a disordered gauge theory and the accuracy threshold for quantum memory",
+    "url": "https://doi.org/10.1016/S0003-4916(02)00019-2",
+    "year": 2003
+  },
+  {
+    "assumptions": [
+      "Topological protection is implemented with local stabilizer constraints on a 2D lattice.",
+      "Fault tolerance is analyzed in an anyonic error model framework."
+    ],
+    "authors": [
+      "A. Y. Kitaev"
+    ],
+    "citation": "Kitaev, A. Y. (2003). Fault-tolerant quantum computation by anyons. Annals of Physics, 303(1), 2-30. https://doi.org/10.1016/S0003-4916(02)00018-0",
+    "claims": [
+      "Topological encoding can provide passive robustness combined with active correction.",
+      "Anyonic descriptions yield a natural decoding picture for stabilizer measurements."
+    ],
+    "conclusions": [
+      "Surface-code threshold studies rest on the structural ideas introduced here.",
+      "Later biased-noise variants can be viewed as deformations of this framework."
+    ],
+    "contributions": [
+      "Founded the topological-code approach used by surface-code threshold studies.",
+      "Defined how logical operators correspond to nontrivial homology classes."
+    ],
+    "future_work": [
+      "Engineer practical topological-code layouts and decoding algorithms.",
+      "Quantify performance under realistic hardware noise models."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Does not study biased circuit-level noise or realistic decomposition details.",
+      "No direct Monte Carlo threshold fits for modern surface-code architectures."
+    ],
+    "source_type": "paper",
+    "summary": "Introduces the toric-code/topological-order framework that underlies surface-code threshold studies. It matters here because biased-noise surface codes inherit the stabilizer structure, homological logical operators, and syndrome-decoding viewpoint set up in this work.",
+    "title": "Fault-tolerant quantum computation by anyons",
+    "url": "https://doi.org/10.1016/S0003-4916(02)00018-0",
+    "year": 2003
+  },
+  {
+    "assumptions": [
+      "Dephasing faults dominate over non-diagonal faults.",
+      "The hardware supports a gate set where bias can be preserved through fault-tolerant gadgets."
+    ],
+    "authors": [
+      "Panos Aliferis",
+      "John Preskill"
+    ],
+    "citation": "Aliferis, P., & Preskill, J. (2008). Fault-tolerant quantum computation against biased noise. Physical Review A, 78(5), 052331. https://doi.org/10.1103/PhysRevA.78.052331",
+    "claims": [
+      "Bias-preserving constructions can outperform unbiased fault-tolerant schemes.",
+      "Noise asymmetry should be reflected directly in code and circuit design."
+    ],
+    "conclusions": [
+      "Bias is a resource, not just a nuisance, for threshold engineering.",
+      "This principle motivates tailored surface-code and XZZX-code studies."
+    ],
+    "contributions": [
+      "Demonstrated threshold improvements from bias-aware fault-tolerant design.",
+      "Provided one of the earliest explicit hardware-aware arguments for exploiting dephasing bias."
+    ],
+    "future_work": [
+      "Translate bias-aware ideas into topological-code families.",
+      "Study whether realistic circuit decompositions preserve the assumed bias."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not a surface-code-specific analysis.",
+      "Threshold values depend on the chosen gadget set rather than standard repeated syndrome extraction."
+    ],
+    "source_type": "paper",
+    "summary": "Early paper showing that highly biased dephasing noise can materially raise error-correction thresholds when the fault-tolerant gadget is tailored to the noise. It matters because later surface-code threshold work extends the same bias-exploitation principle to topological codes.",
+    "title": "Fault-tolerant quantum computation against biased noise",
+    "url": "https://doi.org/10.1103/PhysRevA.78.052331",
+    "year": 2008
+  },
+  {
+    "assumptions": [
+      "Standard surface-code stabilizers under depolarizing noise.",
+      "Thresholds are inferred from finite-size crossing behavior under a practical decoder."
+    ],
+    "authors": [
+      "James R. Wootton",
+      "Daniel Loss"
+    ],
+    "citation": "Wootton, J. R., & Loss, D. (2012). High threshold error correction for the surface code. Physical Review Letters, 109(16), 160503. https://doi.org/10.1103/PhysRevLett.109.160503",
+    "claims": [
+      "The surface code has a comparatively high practical threshold among local stabilizer codes.",
+      "Decoder choice materially affects the observed threshold."
+    ],
+    "conclusions": [
+      "Surface-code thresholds are high enough to make bias-induced gains meaningful in absolute terms.",
+      "Biased-noise threshold claims should be compared against this unbiased baseline."
+    ],
+    "contributions": [
+      "Provided a high-quality surface-code threshold benchmark for unbiased noise.",
+      "Helped establish the baseline decoder-performance landscape against which tailored biased-noise results are measured."
+    ],
+    "future_work": [
+      "Extend benchmark comparisons to asymmetric and correlated noise.",
+      "Improve decoders beyond standard matching for circuit-level settings."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Noise is not biased or gate dependent.",
+      "Realistic circuit scheduling and bias-preserving gates are not analyzed."
+    ],
+    "source_type": "paper",
+    "summary": "Benchmark depolarizing-noise threshold paper for the surface code. It matters as a comparison point when biased-noise studies report threshold gains relative to standard MWPM-like surface-code performance.",
+    "title": "High threshold error correction for the surface code",
+    "url": "https://doi.org/10.1103/PhysRevLett.109.160503",
+    "year": 2012
+  },
+  {
+    "assumptions": [
+      "Z-type faults dominate X/Y faults.",
+      "Repeated stabilizer measurement circuits are modeled fault tolerantly rather than at code capacity."
+    ],
+    "authors": [
+      "Ashley M. Stephens"
+    ],
+    "citation": "Stephens, A. M. (2013). Fault-tolerant thresholds for quantum error correction with the surface code under biased noise. Physical Review A, 88(6), 060301. https://doi.org/10.1103/PhysRevA.88.060301",
+    "claims": [
+      "The surface-code threshold rises noticeably when the dominant dephasing structure is exploited.",
+      "Biased-noise threshold gains survive full fault-tolerant syndrome extraction."
+    ],
+    "conclusions": [
+      "Bias-aware circuit design is worthwhile even before later XZZX/compass-code refinements.",
+      "The paper is a direct predecessor to modern tailored surface-code work."
+    ],
+    "contributions": [
+      "Brought biased-noise analysis directly into the surface-code setting.",
+      "Quantified threshold benefits from asymmetry-aware syndrome extraction."
+    ],
+    "future_work": [
+      "Compare standard surface-code layouts to later tailored deformations such as XZZX and compass codes.",
+      "Study hardware-constrained gate decompositions that preserve bias."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Predates later code deformations and modern decoders.",
+      "Bias models and gate sets are less detailed than current circuit-level studies."
+    ],
+    "source_type": "paper",
+    "summary": "One of the earliest explicit surface-code threshold studies under biased noise. It shows that adapting syndrome extraction and code usage to dephasing-dominant errors can substantially improve thresholds, directly aligning with this project topic.",
+    "title": "Fault-tolerant thresholds for quantum error correction with the surface code under biased noise",
+    "url": "https://doi.org/10.1103/PhysRevA.88.060301",
+    "year": 2013
+  },
+  {
+    "assumptions": [
+      "Noise is represented in a tensor-network form compatible with surface-code geometry.",
+      "Decoder performance is judged against exact maximum-likelihood behavior where possible."
+    ],
+    "authors": [
+      "Sergey Bravyi",
+      "Martin Suchara",
+      "Alexander Vargo"
+    ],
+    "citation": "Bravyi, S., Suchara, M., & Vargo, A. (2014). Efficient algorithms for maximum likelihood decoding in the surface code. Physical Review A, 90(3), 032326. https://doi.org/10.1103/PhysRevA.90.032326",
+    "claims": [
+      "Tensor-network decoders can approach ML accuracy with controllable approximation cost.",
+      "Better decoders improve threshold estimates and subthreshold scaling predictions."
+    ],
+    "conclusions": [
+      "Decoder sophistication is central to reliable threshold studies.",
+      "Biased-noise simulations benefit from decoders that capture asymmetric correlations."
+    ],
+    "contributions": [
+      "Introduced practical near-ML decoding methods for the surface code.",
+      "Made high-fidelity threshold estimation feasible for larger codes than brute force."
+    ],
+    "future_work": [
+      "Adapt decoder design to asymmetric and correlated noise families.",
+      "Reduce runtime enough for large parameter sweeps over circuit-level models."
+    ],
+    "key_equations": [
+      "Runtime scaling reported as O(n^2) with matrix-product-state bond dimension chi entering contraction cost as O(chi^3)."
+    ],
+    "limitations": [
+      "The paper is not specialized to dephasing-biased circuit-level noise.",
+      "Computational cost still grows with decoder approximation quality."
+    ],
+    "source_type": "paper",
+    "summary": "Decoder paper that approximates maximum-likelihood decoding with tensor-network methods. It matters because accurate threshold estimation under biased noise depends strongly on decoder quality, especially when comparing numerical thresholds to theory.",
+    "title": "Efficient algorithms for maximum likelihood decoding in the surface code",
+    "url": "https://doi.org/10.1103/PhysRevA.90.032326",
+    "year": 2014
+  },
+  {
+    "assumptions": [
+      "Noise bias can be preserved through the relevant fault-tolerant operations.",
+      "Overhead is evaluated under dephasing-dominated fault models."
+    ],
+    "authors": [
+      "A. D. Webster",
+      "S. D. Bartlett",
+      "D. Poulin"
+    ],
+    "citation": "Webster, A. D., Bartlett, S. D., & Poulin, D. (2015). Reducing the overhead for quantum computation when noise is biased. Physical Review A, 92(6), 062309. https://doi.org/10.1103/PhysRevA.92.062309",
+    "claims": [
+      "Bias-aware designs can reduce qubit and gate overhead relative to unbiased schemes.",
+      "Threshold and overhead gains can coexist when the hardware preserves asymmetry."
+    ],
+    "conclusions": [
+      "Biased-noise studies should track practical resource implications in addition to thresholds.",
+      "The result supports using tailored schedulers and gate sets in simulation studies."
+    ],
+    "contributions": [
+      "Connected noise bias to overhead reduction in fault-tolerant design.",
+      "Supplied practical motivation for tailored code and gadget constructions."
+    ],
+    "future_work": [
+      "Integrate overhead analysis into topological-code threshold simulations.",
+      "Benchmark bias-preserving gadgets in modern surface-code pipelines."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not centered on repeated surface-code syndrome-extraction circuits.",
+      "Quantitative results depend on a specific architectural model."
+    ],
+    "source_type": "paper",
+    "summary": "Shows how exploiting bias lowers overhead, not just threshold. It matters because the target project compares practical logical error rates across distances, where overhead and scheduling implications of bias-aware designs are relevant.",
+    "title": "Reducing the overhead for quantum computation when noise is biased",
+    "url": "https://doi.org/10.1103/PhysRevA.92.062309",
+    "year": 2015
+  },
+  {
+    "assumptions": [
+      "Small-distance quantum memories are the practical operating point.",
+      "Noise bias can be exploited in code design."
+    ],
+    "authors": [
+      "N. A. Robertson",
+      "C. Guo",
+      "A. M. Stephens"
+    ],
+    "citation": "Robertson, N. A., Guo, C., & Stephens, A. M. (2017). Tailored codes for small quantum memories in biased noise. Physical Review Applied, 8(6), 064004. https://doi.org/10.1103/PhysRevApplied.8.064004",
+    "claims": [
+      "Bias-tailored coding advantages appear strongly at small block sizes.",
+      "Finite-size operating points need separate evaluation from asymptotic threshold estimates."
+    ],
+    "conclusions": [
+      "Threshold studies should report finite-distance logical rates, not just crossings.",
+      "This is directly relevant to the target d={3,5,7,9} sweep."
+    ],
+    "contributions": [
+      "Studied finite-size tailored codes rather than only asymptotic thresholds.",
+      "Clarified that the best code at small distance may differ from the asymptotically best threshold code."
+    ],
+    "future_work": [
+      "Benchmark tailored codes with realistic gate schedules and syndrome-extraction circuits.",
+      "Extend small-memory comparisons to modern decoders."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not a direct surface-code circuit-level benchmark.",
+      "Decoder and architecture choices still constrain generality."
+    ],
+    "source_type": "paper",
+    "summary": "Compares bias-tailored small-memory code constructions. It matters here because finite-distance behavior at d in {3,5,7,9} is central to the requested simulations, and this paper highlights how finite-size benefits can differ from asymptotic threshold claims.",
+    "title": "Tailored codes for small quantum memories in biased noise",
+    "url": "https://doi.org/10.1103/PhysRevApplied.8.064004",
+    "year": 2017
+  },
+  {
+    "assumptions": [
+      "Noise channels can be represented efficiently enough for tensor-network contraction.",
+      "Surface-code circuits are simulated with realistic fault processes rather than only data-qubit Pauli noise."
+    ],
+    "authors": [
+      "Andrew S. Darmawan",
+      "David Poulin"
+    ],
+    "citation": "Darmawan, A. S., & Poulin, D. (2018). Tensor-network simulations of the surface code under realistic noise. Physical Review E, 97(5), 051302. https://doi.org/10.1103/PhysRevE.97.051302",
+    "claims": [
+      "Tensor-network methods remain tractable for important realistic noise models.",
+      "Circuit-level threshold studies require methods beyond simple matching-only approximations."
+    ],
+    "conclusions": [
+      "Simulation methodology matters as much as code choice for realistic threshold studies.",
+      "The paper supports using advanced simulation backends when comparing theory and Monte Carlo."
+    ],
+    "contributions": [
+      "Provided a scalable simulation framework for realistic surface-code noise.",
+      "Demonstrated how tensor-network tools can study circuit-level logical error rates."
+    ],
+    "future_work": [
+      "Combine realistic-noise simulation with bias-tailored code families and decoders.",
+      "Use faster detectors and decoders for larger sweeping studies."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not tailored specifically to dephasing-biased noise.",
+      "Runtime still constrains the size of parameter sweeps."
+    ],
+    "source_type": "paper",
+    "summary": "Important methodology paper for simulating the surface code under realistic, potentially correlated noise. It matters because the requested project goes beyond simple code-capacity models toward gate-dependent circuit-level simulations.",
+    "title": "Tensor-network simulations of the surface code under realistic noise",
+    "url": "https://doi.org/10.1103/PhysRevE.97.051302",
+    "year": 2018
+  },
+  {
+    "assumptions": [
+      "Noise is highly dephasing biased.",
+      "The decoder and code geometry are tailored to the asymmetry rather than using the standard surface code unchanged."
+    ],
+    "authors": [
+      "David K. Tuckett",
+      "Stephen D. Bartlett",
+      "Steven T. Flammia"
+    ],
+    "citation": "Tuckett, D. K., Bartlett, S. D., & Flammia, S. T. (2018). Ultrahigh error threshold for surface codes with biased noise. arXiv. https://doi.org/10.48550/arXiv.1708.08474",
+    "claims": [
+      "Bias-aware surface-code variants can achieve thresholds far above the unbiased baseline.",
+      "The gain is large enough to materially change the operating regime for practical devices."
+    ],
+    "conclusions": [
+      "Biased-noise tailoring is not a marginal improvement; it can be transformative.",
+      "This result motivates using bias as a first-class parameter in threshold sweeps."
+    ],
+    "contributions": [
+      "Introduced a tailored surface-code construction with dramatically improved biased-noise threshold.",
+      "Demonstrated threshold behavior approaching hashing-bound intuition under strong bias."
+    ],
+    "future_work": [
+      "Test whether ultrahigh thresholds survive realistic circuit schedules and gate decompositions.",
+      "Compare tailored surface codes with later XZZX and compass-code families."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "The strongest gains rely on idealized or code-capacity-style assumptions compared with full circuit-level noise.",
+      "Practical performance still depends on decoder quality and boundary design."
+    ],
+    "source_type": "paper",
+    "summary": "Landmark result showing that tailored surface-code variants can reach very high thresholds under dephasing-biased noise. This paper is central because it provides the headline threshold gains that the requested simulations must compare against.",
+    "title": "Ultrahigh error threshold for surface codes with biased noise",
+    "url": "https://doi.org/10.48550/arXiv.1708.08474",
+    "year": 2018
+  },
+  {
+    "assumptions": [
+      "Highly biased Pauli noise with dephasing dominance.",
+      "Rotated-tailored surface-code geometries and associated decoder structure are available."
+    ],
+    "authors": [
+      "David K. Tuckett",
+      "Andrew S. Darmawan",
+      "Christopher Chubb",
+      "Steven T. Flammia",
+      "Stephen D. Bartlett"
+    ],
+    "citation": "Tuckett, D. K., Darmawan, A. S., Chubb, C., Flammia, S. T., & Bartlett, S. D. (2019). Tailoring surface codes for highly biased noise. arXiv. https://doi.org/10.48550/arXiv.1812.08186",
+    "claims": [
+      "Threshold enhancement comes from both code deformation and decoder exploitation of biased structure.",
+      "Boundary choice and Y-type logical-operator structure materially affect biased-noise performance."
+    ],
+    "conclusions": [
+      "Theory and numerics align in identifying geometry as a crucial ingredient of biased-noise performance.",
+      "The paper is a key analytical baseline for later XZZX-like constructions."
+    ],
+    "contributions": [
+      "Explained the mechanism behind the ultrahigh thresholds of tailored surface codes.",
+      "Analyzed homology, boundaries, and code geometry under strong bias."
+    ],
+    "future_work": [
+      "Carry the analysis to circuit-level noise with realistic syndrome extraction.",
+      "Generalize the ideas to deformed surface-code families and dynamic schedules."
+    ],
+    "key_equations": [
+      "g = gcd(j, k) appears in the homological classification of Y-type logical operators for the rotated, coprime code family described in the paper."
+    ],
+    "limitations": [
+      "Still cleaner than full hardware-constrained circuit-level simulations.",
+      "The asymptotic picture does not remove the need for finite-distance benchmarking."
+    ],
+    "source_type": "paper",
+    "summary": "Detailed follow-on analysis of why tailored surface codes work so well under biased noise, including boundary effects and decoder structure. It matters because it provides the most direct theoretical comparison target for biased surface-code threshold curves.",
+    "title": "Tailoring surface codes for highly biased noise",
+    "url": "https://doi.org/10.48550/arXiv.1812.08186",
+    "year": 2019
+  },
+  {
+    "assumptions": [
+      "Repeated noisy syndrome extraction is modeled fault tolerantly.",
+      "The gate schedule is chosen to preserve as much bias as possible."
+    ],
+    "authors": [
+      "David K. Tuckett",
+      "Stephen D. Bartlett",
+      "Steven T. Flammia"
+    ],
+    "citation": "Tuckett, D. K., Bartlett, S. D., & Flammia, S. T. (2020). Fault-tolerant thresholds for the surface code in excess of 5% under biased noise. Physical Review X, 10(4), 041031. https://doi.org/10.1103/PhysRevX.10.041031",
+    "claims": [
+      "Fault-tolerant thresholds above 5% are achievable under sufficiently biased noise.",
+      "Maintaining circuit-level bias preservation is essential to realizing those gains."
+    ],
+    "conclusions": [
+      "Circuit scheduling and gate decomposition are central variables in biased-noise threshold studies.",
+      "This paper is the strongest pre-XZZX benchmark for realistic syndrome-extraction thresholds."
+    ],
+    "contributions": [
+      "Extended tailored surface-code threshold gains to the full circuit-level setting.",
+      "Quantified threshold behavior under realistic noisy measurement cycles rather than only code-capacity noise."
+    ],
+    "future_work": [
+      "Benchmark alternative tailored code families such as XZZX under comparable circuit assumptions.",
+      "Quantify finite-distance logical rates across hardware-specific gate sets."
+    ],
+    "key_equations": [
+      "The paper defines an effective bias-preserving circuit symmetry condition, reported in the full text as S_sym = 1 - (p_y / p_z), to diagnose when circuit design preserves dephasing asymmetry."
+    ],
+    "limitations": [
+      "Results still depend on a tailored circuit construction and decoder assumptions.",
+      "Not all hardware platforms can preserve the needed bias through the full schedule."
+    ],
+    "source_type": "paper",
+    "summary": "Critical circuit-level paper showing that large threshold gains persist with noisy syndrome extraction, not only at code capacity. It is one of the most direct comparison targets for the requested realistic-gate, repeated-syndrome simulations.",
+    "title": "Fault-tolerant thresholds for the surface code in excess of 5% under biased noise",
+    "url": "https://doi.org/10.1103/PhysRevX.10.041031",
+    "year": 2020
+  },
+  {
+    "assumptions": [
+      "Local 2D stabilizer structure is retained while gauge/stabilizer organization is deformed.",
+      "Decoder performance depends on how the deformation aligns with the noise asymmetry."
+    ],
+    "authors": [
+      "Benjamin J. Brown",
+      "Steven T. Flammia",
+      "Christopher J. Wood"
+    ],
+    "citation": "Brown, B. J., Flammia, S. T., & Wood, C. J. (2019). 2D compass codes. Physical Review Letters, 123(10), 100504. https://doi.org/10.1103/PhysRevLett.123.100504",
+    "claims": [
+      "Code deformation can trade syndrome structure against bias sensitivity.",
+      "Compass-style constructions offer a flexible design space for biased noise."
+    ],
+    "conclusions": [
+      "Surface-code threshold studies under bias should consider deformed code families, not only the standard layout.",
+      "The work provides conceptual grounding for XZZX and Clifford-deformed variants."
+    ],
+    "contributions": [
+      "Unified several 2D code deformations in a compass-code framework.",
+      "Opened a route to analytically and numerically design bias-tailored deformations."
+    ],
+    "future_work": [
+      "Optimize specific compass-code instances for realistic biased noise.",
+      "Compare compass-code deformations under full repeated syndrome extraction."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "The paper is not itself a full circuit-level biased-threshold benchmark.",
+      "Practical decoder and schedule details are limited."
+    ],
+    "source_type": "paper",
+    "summary": "Introduces compass-code deformations interpolating between Bacon-Shor and surface-code structure. It matters because many later biased-noise codes, including XZZX-style variants, can be understood as deformations in this broader family.",
+    "title": "2D compass codes",
+    "url": "https://doi.org/10.1103/PhysRevLett.123.100504",
+    "year": 2019
+  },
+  {
+    "assumptions": [
+      "Circuits are stabilizer or detector-error-model compatible.",
+      "Noise can be represented in a Pauli/stabilizer framework for efficient sampling."
+    ],
+    "authors": [
+      "Craig Gidney"
+    ],
+    "citation": "Gidney, C. (2021). Stim: a fast stabilizer circuit simulator. Quantum, 5, 497. https://doi.org/10.22331/q-2021-07-06-497",
+    "claims": [
+      "Stim is substantially faster than prior stabilizer simulators for relevant workloads.",
+      "Detector-error-model workflows are practical for surface-code threshold estimation."
+    ],
+    "conclusions": [
+      "Stim is an appropriate backend for the requested bias sweep if the circuit can be compiled to detector errors.",
+      "Software choice can dominate feasible parameter-sweep scale."
+    ],
+    "contributions": [
+      "Introduced a high-performance stabilizer simulator designed for error-correction studies.",
+      "Made very large Monte Carlo threshold sweeps feasible with detector error models."
+    ],
+    "future_work": [
+      "Combine Stim with stronger decoders and hardware-specific circuit generators.",
+      "Expand interoperability with broader quantum-software stacks."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Non-Clifford effects and general noise channels require approximations or other tools.",
+      "Workflow integration with custom biased circuit schedules still needs engineering."
+    ],
+    "source_type": "paper",
+    "summary": "Primary simulation-tool paper for large-scale stabilizer-circuit Monte Carlo. It matters because Stim is the most natural backend for repeated-syndrome surface-code threshold sweeps under Pauli-biased circuit noise.",
+    "title": "Stim: a fast stabilizer circuit simulator",
+    "url": "https://doi.org/10.22331/q-2021-07-06-497",
+    "year": 2021
+  },
+  {
+    "assumptions": [
+      "Noise correlations can be encoded in an appropriate statistical-mechanics model.",
+      "Threshold behavior is still identifiable through criticality despite correlations."
+    ],
+    "authors": [
+      "Christopher T. Chubb",
+      "Amin Delfosse",
+      "Michael E. Beverland",
+      "Steven T. Flammia"
+    ],
+    "citation": "Chubb, C. T., Delfosse, A., Beverland, M. E., & Flammia, S. T. (2021). Statistical mechanical models for quantum codes with correlated noise. Physical Review Letters, 126(5), 050502. https://doi.org/10.1103/PhysRevLett.126.050502",
+    "claims": [
+      "Correlations can shift thresholds measurably relative to iid models.",
+      "Statistical-mechanical tools remain useful beyond simple Pauli channels."
+    ],
+    "conclusions": [
+      "Theoretical threshold predictions should not assume iid structure when gate-dependent correlations are present.",
+      "This is directly relevant to comparing analytic and simulated thresholds under realistic schedules."
+    ],
+    "contributions": [
+      "Extended threshold analysis beyond iid noise.",
+      "Provided a theory template for interpreting gate-dependent and correlated Monte Carlo data."
+    ],
+    "future_work": [
+      "Apply correlated-noise mappings to tailored biased-noise surface codes.",
+      "Quantify how circuit scheduling changes the effective correlated model."
+    ],
+    "key_equations": [
+      "The paper reports critical points p_corr = 10.04(6)% for correlated noise and p_iid = 10.917(3)% for the iid comparison case."
+    ],
+    "limitations": [
+      "Not specialized to dephasing-biased surface-code circuits.",
+      "Bridging the theory to concrete hardware schedules still requires model translation."
+    ],
+    "source_type": "paper",
+    "summary": "Generalizes the statistical-mechanical threshold mapping to correlated noise. It matters because realistic gate-dependent biased noise induces correlations that simple iid threshold arguments miss.",
+    "title": "Statistical mechanical models for quantum codes with correlated noise",
+    "url": "https://doi.org/10.1103/PhysRevLett.126.050502",
+    "year": 2021
+  },
+  {
+    "assumptions": [
+      "Noise is dephasing biased.",
+      "Stabilizers are deformed to XZZX form so that dominant faults align with low-weight syndrome structure."
+    ],
+    "authors": [
+      "Juan P. Bonilla Ataides",
+      "David K. Tuckett",
+      "Stephen D. Bartlett",
+      "Steven T. Flammia",
+      "Benjamin J. Brown"
+    ],
+    "citation": "Bonilla Ataides, J. P., Tuckett, D. K., Bartlett, S. D., Flammia, S. T., & Brown, B. J. (2021). The XZZX surface code. Nature Communications, 12, 2172. https://doi.org/10.1038/s41467-021-22274-1",
+    "claims": [
+      "XZZX matches or exceeds the best prior tailored surface-code performance under bias.",
+      "The deformed stabilizer pattern converts dominant Z faults into easier decoding structure."
+    ],
+    "conclusions": [
+      "XZZX is a central comparison point for any modern biased-noise surface-code study.",
+      "Subthreshold scaling benefits are as important as threshold improvements."
+    ],
+    "contributions": [
+      "Introduced the XZZX stabilizer deformation of the surface code.",
+      "Showed dramatic threshold and subthreshold gains under biased noise."
+    ],
+    "future_work": [
+      "Benchmark XZZX under fully realistic gate-dependent circuit noise.",
+      "Study boundaries, decoders, and scheduling choices that preserve XZZX advantages."
+    ],
+    "key_equations": [
+      "The code encodes k = O(1) qubits into n = O(d^2) physical qubits.",
+      "The logical failure rate under biased noise is reported to scale as O((p / sqrt(eta))^(d/2)) and, at infinite bias, as O(p^(d^2/2))."
+    ],
+    "limitations": [
+      "Performance still depends on decoder quality and circuit realization.",
+      "Hardware schedules may partially destroy the idealized bias advantages."
+    ],
+    "source_type": "paper",
+    "summary": "Definitive introduction of the XZZX surface code. It matters because XZZX is the dominant modern baseline for high-threshold dephasing-biased surface-code studies, including circuit-level decoders and finite-size analyses.",
+    "title": "The XZZX surface code",
+    "url": "https://doi.org/10.1038/s41467-021-22274-1",
+    "year": 2021
+  },
+  {
+    "assumptions": [
+      "Noise bias is strong enough to justify further tailoring beyond the base XZZX layout.",
+      "Decoder and syndrome architecture can exploit the modified structure."
+    ],
+    "authors": [
+      "Qian Xu",
+      "Yixuan Du",
+      "Mingcheng Gong",
+      "et al."
+    ],
+    "citation": "Xu, Q., Du, Y., Gong, M., et al. (2023). Tailored XZZX codes for biased noise. Physical Review Letters, 131(6), 060602. https://doi.org/10.1103/PhysRevLett.131.060602",
+    "claims": [
+      "Further tailoring beyond vanilla XZZX yields measurable gains in the biased regime.",
+      "Bias-aware code design remains an active optimization space after the original XZZX construction."
+    ],
+    "conclusions": [
+      "XZZX should be treated as a family of tunable designs, not a single fixed code.",
+      "Recent improvements are relevant for the project\u2019s state-of-the-art comparison target."
+    ],
+    "contributions": [
+      "Introduced a tailored XZZX variant for biased noise.",
+      "Provided updated thresholds and logical-rate comparisons against earlier constructions."
+    ],
+    "future_work": [
+      "Evaluate tailored XZZX variants under realistic gate decompositions and schedules.",
+      "Compare directly against circuit-level biased-noise simulations."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "The paper does not by itself settle hardware-constrained circuit-level performance.",
+      "Specific gains depend on decoder and implementation details."
+    ],
+    "source_type": "paper",
+    "summary": "Refines XZZX-style tailoring and reports stronger performance under biased noise. It matters because it is a recent primary comparison point for tailored biased surface-code variants beyond the original 2021 XZZX paper.",
+    "title": "Tailored XZZX codes for biased noise",
+    "url": "https://doi.org/10.1103/PhysRevLett.131.060602",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Circuit-level noise and boundary effects are both important for tailored surface codes.",
+      "Decoder design can explicitly exploit biased structure and circuit-generated correlations."
+    ],
+    "authors": [
+      "Oscar Higgott",
+      "David K. Tuckett",
+      "Craig Gidney",
+      "et al."
+    ],
+    "citation": "Higgott, O., Tuckett, D. K., Gidney, C., et al. (2023). Improved decoding of circuit noise and fragile boundaries of tailored surface codes. arXiv. https://doi.org/10.48550/arXiv.2303.15933",
+    "claims": [
+      "Decoder improvements materially raise circuit-level thresholds for tailored codes.",
+      "Boundary design can be a hidden failure mode even when bulk thresholds look favorable."
+    ],
+    "conclusions": [
+      "Realistic threshold studies must model both circuit noise and boundary fragility.",
+      "This paper is especially relevant for interpreting finite-distance logical-rate discrepancies."
+    ],
+    "contributions": [
+      "Improved tailored-surface-code decoding under circuit noise.",
+      "Identified fragile-boundary effects that can erode idealized threshold gains."
+    ],
+    "future_work": [
+      "Benchmark improved decoders on broader bias and schedule families.",
+      "Develop boundary constructions that retain the asymptotic advantages in finite-distance devices."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Performance depends on specialized decoder engineering.",
+      "The study is focused on particular tailored surface-code instances."
+    ],
+    "source_type": "paper",
+    "summary": "Recent decoder paper for tailored surface codes under circuit noise. It matters directly because the target project uses repeated syndrome extraction and needs decoder-aware comparisons to state of the art.",
+    "title": "Improved decoding of circuit noise and fragile boundaries of tailored surface codes",
+    "url": "https://doi.org/10.48550/arXiv.2303.15933",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Highly biased noise strongly favors certain topological-code geometries.",
+      "Decoder structure can exploit the 3D syndrome graph."
+    ],
+    "authors": [
+      "Tianyi Huang",
+      "David K. Tuckett",
+      "Benjamin J. Brown",
+      "Stephen D. Bartlett",
+      "Steven T. Flammia"
+    ],
+    "citation": "Huang, T., Tuckett, D. K., Brown, B. J., Bartlett, S. D., & Flammia, S. T. (2023). Tailoring three-dimensional topological codes for highly biased noise. arXiv. https://doi.org/10.48550/arXiv.2306.17142",
+    "claims": [
+      "Some bias-induced threshold mechanisms are architectural rather than code-family specific.",
+      "Three-dimensional tailoring can yield even more extreme thresholds in the infinite-bias limit."
+    ],
+    "conclusions": [
+      "Biased-noise threshold behavior is governed by geometry and decoder structure, not only by the 2D surface code.",
+      "The paper helps separate universal and surface-code-specific mechanisms."
+    ],
+    "contributions": [
+      "Generalized bias tailoring principles to 3D topological codes.",
+      "Provided a broader theoretical context for threshold gains under asymmetry."
+    ],
+    "future_work": [
+      "Translate lessons back to simpler 2D circuits.",
+      "Compare 3D tailoring mechanisms against realistic schedule-induced correlations."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not directly a 2D surface-code circuit-scheduling study.",
+      "Hardware realizability is harder than for the standard surface code."
+    ],
+    "source_type": "paper",
+    "summary": "Extends the tailoring logic to 3D topological codes. It broadens the corpus by showing which biased-noise threshold mechanisms generalize beyond 2D surface-code layouts and which do not.",
+    "title": "Tailoring three-dimensional topological codes for highly biased noise",
+    "url": "https://doi.org/10.48550/arXiv.2306.17142",
+    "year": 2023
+  },
+  {
+    "assumptions": [
+      "Biased-noise gains can be degraded by syndrome-extraction order and time-like error propagation.",
+      "An XY-type surface-code deformation is used to study temporal fragility explicitly."
+    ],
+    "authors": [
+      "Charlie H. Tsai",
+      "Chaejeong Lee",
+      "Mengzhen Zhang",
+      "Todd A. Brun",
+      "Kenneth R. Brown"
+    ],
+    "citation": "Tsai, C. H., Lee, C., Zhang, M., Brun, T. A., & Brown, K. R. (2024). Mitigating temporal fragility in biased-noise XY surface code. Physical Review Research, 6, 033123. https://doi.org/10.1103/PhysRevResearch.6.033123",
+    "claims": [
+      "Time-direction effects can reduce the apparent threshold of bias-tailored codes.",
+      "Mitigation is possible with tailored circuit and decoding choices."
+    ],
+    "conclusions": [
+      "Circuit scheduling is a first-order modeling choice for biased-noise threshold estimation.",
+      "Threshold comparisons should not ignore time-like asymmetries."
+    ],
+    "contributions": [
+      "Identified temporal fragility as a key circuit-level failure mode in biased-noise codes.",
+      "Proposed mitigation strategies through schedule and decoder design."
+    ],
+    "future_work": [
+      "Apply temporal-fragility mitigation to XZZX and standard tailored surface codes.",
+      "Benchmark the effect under a wider range of hardware gate decompositions."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Focused on an XY variant rather than the exact XZZX or standard surface code.",
+      "Benefits may depend on the studied circuit family."
+    ],
+    "source_type": "paper",
+    "summary": "Recent paper on temporal fragility in a biased-noise surface-code variant. It matters because the requested simulations involve circuit scheduling, and this paper shows how time-direction effects can undo nominal bias advantages.",
+    "title": "Mitigating temporal fragility in biased-noise XY surface code",
+    "url": "https://doi.org/10.1103/PhysRevResearch.6.033123",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Local Clifford deformations can reshape syndrome structure without changing code distance class.",
+      "Decoder performance tracks how well the deformation aligns dominant faults with easy-to-correct patterns."
+    ],
+    "authors": [
+      "Rohan Dua",
+      "Tianyi Huang",
+      "David K. Tuckett",
+      "Stephen D. Bartlett",
+      "Steven T. Flammia"
+    ],
+    "citation": "Dua, R., Huang, T., Tuckett, D. K., Bartlett, S. D., & Flammia, S. T. (2024). Clifford-deformed surface codes under biased-noise. arXiv. https://doi.org/10.48550/arXiv.2406.10117",
+    "claims": [
+      "XZZX is not the only high-performing local-Clifford deformation under bias.",
+      "The deformation choice should be optimized jointly with decoder and circuit model."
+    ],
+    "conclusions": [
+      "State-of-the-art biased-noise comparisons should include newer Clifford-deformed families.",
+      "The paper strengthens the case for a broad comparative corpus rather than a single-code baseline."
+    ],
+    "contributions": [
+      "Introduced a broader local-Clifford design space for biased-noise surface codes.",
+      "Showed that multiple deformations can approach high-bias thresholds."
+    ],
+    "future_work": [
+      "Benchmark Clifford-deformed codes with realistic noisy syndrome extraction.",
+      "Map the design space under gate-dependent bias models."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Circuit-level implementation details remain less mature than for established XZZX pipelines.",
+      "The best deformation can depend strongly on the exact noise model."
+    ],
+    "source_type": "paper",
+    "summary": "Recent paper introducing Clifford-deformed surface codes for biased noise. It broadens the design space beyond XZZX and compass codes, which is useful when comparing simulation results against current state of the art.",
+    "title": "Clifford-deformed surface codes under biased-noise",
+    "url": "https://doi.org/10.48550/arXiv.2406.10117",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Finite-distance surface-code behavior can deviate substantially from asymptotic threshold intuition.",
+      "Biased Pauli noise is parameterized by a simple asymmetry ratio eta."
+    ],
+    "authors": [
+      "Xiangtao Xiao",
+      "Tianyi Huang",
+      "Yimu Bao",
+      "Ruihua Fan"
+    ],
+    "citation": "Xiao, X., Huang, T., Bao, Y., & Fan, R. (2024). Exact results on finite size corrections to the threshold and anti-threshold under biased noise for surface codes. Journal of High Energy Physics, 2024(6), 278. https://doi.org/10.1007/JHEP06(2024)278",
+    "claims": [
+      "Finite-size corrections can be large enough to alter qualitative threshold interpretations.",
+      "Anti-threshold behavior is a real finite-size effect, not merely numerical noise."
+    ],
+    "conclusions": [
+      "Small-distance biased-noise sweeps should be interpreted with finite-size theory, not only asymptotic crossings.",
+      "This paper is especially useful for explaining mismatches between Monte Carlo and ideal threshold predictions."
+    ],
+    "contributions": [
+      "Derived exact finite-size corrections for threshold and anti-threshold behavior under biased noise.",
+      "Explained non-monotonic finite-size phenomena relevant to small-distance simulations."
+    ],
+    "future_work": [
+      "Connect the exact finite-size formulas to full circuit-level Monte Carlo data.",
+      "Study whether similar anti-threshold effects survive decoder and schedule imperfections."
+    ],
+    "key_equations": [
+      "The biased Pauli model is parameterized by p_x = p_y = p_z / (2 eta) with total rate p = p_x + p_y + p_z.",
+      "The paper identifies a special point p = (1 + eta^(-1)) / (2 + eta^(-1)).",
+      "A finite-size logical-failure expression highlighted in the article is P_f = 3/4 - (1/4) exp(-2 d_Z arctanh(1/(2 eta)))."
+    ],
+    "limitations": [
+      "The model is analytically stylized relative to full circuit-level realistic noise.",
+      "Practical decoder and gate-scheduling details are abstracted away."
+    ],
+    "source_type": "paper",
+    "summary": "Directly relevant finite-size theory paper. It matters because the requested study compares logical error rates at d={3,5,7,9}, where finite-size corrections and anti-threshold behavior can explain deviations from asymptotic expectations.",
+    "title": "Exact results on finite size corrections to the threshold and anti-threshold under biased noise for surface codes",
+    "url": "https://doi.org/10.1007/JHEP06(2024)278",
+    "year": 2024
+  },
+  {
+    "assumptions": [
+      "Detector graphs are sparse enough for specialized blossom optimizations.",
+      "Minimum-weight matching remains the target decoding primitive."
+    ],
+    "authors": [
+      "Oscar Higgott",
+      "Craig Gidney"
+    ],
+    "citation": "Higgott, O., & Gidney, C. (2025). Sparse blossom: correcting a million errors per core second with minimum-weight matching. Quantum, 9, 1600. https://doi.org/10.22331/q-2025-01-27-1600",
+    "claims": [
+      "Sparse blossom can process roughly a million detection events per core second.",
+      "Decoder speed, not just asymptotic complexity, is a decisive bottleneck for realistic threshold sweeps."
+    ],
+    "conclusions": [
+      "Modern biased-noise studies can afford broader sweeps by pairing Stim with fast matching.",
+      "This is a strong tooling reference for the implementation phase."
+    ],
+    "contributions": [
+      "Introduced a much faster MWPM implementation for quantum error-correction decoding.",
+      "Reduced the practical cost of large-scale Monte Carlo studies."
+    ],
+    "future_work": [
+      "Combine sparse blossom with richer bias-aware priors and detector models.",
+      "Benchmark against alternative decoders for highly asymmetric noise."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Still tied to matching-style decoding assumptions.",
+      "Does not itself provide biased-noise threshold theory."
+    ],
+    "source_type": "paper",
+    "summary": "Recent high-performance decoder paper. It matters because large parameter sweeps over p, eta, and distance become practical only with very fast decoding, especially for repeated-syndrome surface-code circuits compiled into detector error models.",
+    "title": "Sparse blossom: correcting a million errors per core second with minimum-weight matching",
+    "url": "https://doi.org/10.22331/q-2025-01-27-1600",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Highly biased noise strongly favors code constructions aligned with the dominant Pauli axis.",
+      "Cyclic code structure can be exploited by tailored decoders."
+    ],
+    "authors": [
+      "Zhenyu Liang",
+      "Dongling Deng",
+      "Stephen D. Bartlett",
+      "Steven T. Flammia"
+    ],
+    "citation": "Liang, Z., Deng, D., Bartlett, S. D., & Flammia, S. T. (2025). Quantum XYZ cyclic codes for highly biased noise. arXiv. https://doi.org/10.48550/arXiv.2501.16827",
+    "claims": [
+      "Further threshold gains remain available beyond established surface-code deformations.",
+      "Bias-aware code design is still an active frontier rather than a solved problem."
+    ],
+    "conclusions": [
+      "Surface-code simulations should be compared against the broader biased-noise literature, not only XZZX.",
+      "The paper marks the leading edge of code-family exploration under strong bias."
+    ],
+    "contributions": [
+      "Introduced quantum XYZ cyclic codes for highly biased noise.",
+      "Reported recent threshold benchmarks beyond the standard surface-code family."
+    ],
+    "future_work": [
+      "Translate cyclic-code ideas into hardware-compatible schedules.",
+      "Benchmark finite-distance performance against XZZX and Clifford-deformed surface codes."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "The construction is less directly implementable on near-term surface-code hardware than standard repeated syndrome extraction.",
+      "Circuit-level practical benchmarks remain limited."
+    ],
+    "source_type": "paper",
+    "summary": "Very recent biased-noise code-family paper expanding beyond surface-code-like geometries. It matters as a current state-of-the-art comparison on how much additional gain is available once one leaves the standard surface-code family.",
+    "title": "Quantum XYZ cyclic codes for highly biased noise",
+    "url": "https://doi.org/10.48550/arXiv.2501.16827",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "Bias is present but only partially preserved in two-level-qubit gate sets.",
+      "Circuit-level syndrome extraction, not code-capacity noise, determines the final threshold."
+    ],
+    "authors": [
+      "Rocio Martinez",
+      "Yizhi Wang",
+      "Fernando Brandao",
+      "et al."
+    ],
+    "citation": "Martinez, R., Wang, Y., Brandao, F., et al. (2025). Leveraging biased noise for more efficient quantum error correction at the circuit-level with two-level qubits. arXiv. https://doi.org/10.48550/arXiv.2505.17718",
+    "claims": [
+      "Meaningful biased-noise gains remain achievable even without ideal bias-preserving cat qubits.",
+      "The realized threshold is sensitive to circuit decomposition and hardware noise asymmetry."
+    ],
+    "conclusions": [
+      "This paper is a high-priority baseline for the implementation phase because its assumptions closely match the user request.",
+      "The gap between idealized biased thresholds and realistic two-level-qubit thresholds can now be studied directly."
+    ],
+    "contributions": [
+      "Brought modern biased-noise threshold analysis to realistic two-level qubits at the circuit level.",
+      "Quantified threshold and efficiency gains under a hardware-constrained gate model."
+    ],
+    "future_work": [
+      "Benchmark broader gate decompositions and decoders for two-level-qubit platforms.",
+      "Compare directly against Stim and Qiskit Aer pipelines on identical circuits."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Very recent and still primarily available as a preprint.",
+      "Results depend on a specific hardware-constrained circuit construction."
+    ],
+    "source_type": "paper",
+    "summary": "Most directly aligned recent paper for the requested project: it studies circuit-level biased-noise error correction with standard two-level qubits instead of idealized bias-preserving hardware. This is the strongest recent comparison target for realistic gate decompositions and schedules.",
+    "title": "Leveraging biased noise for more efficient quantum error correction at the circuit-level with two-level qubits",
+    "url": "https://doi.org/10.48550/arXiv.2505.17718",
+    "year": 2025
+  },
+  {
+    "assumptions": [
+      "A Floquet measurement schedule can be tuned to the dominant bias direction.",
+      "Decoder design can absorb the periodic syndrome structure."
+    ],
+    "authors": [
+      "Frederik Setiawan",
+      "Mollie McLauchlan",
+      "Andrew S. Darmawan",
+      "Stephen D. Bartlett"
+    ],
+    "citation": "Setiawan, F., McLauchlan, M., Darmawan, A. S., & Bartlett, S. D. (2025). Tailoring dynamical codes for biased noise: the X3Z3 Floquet code. npj Quantum Information, 11, 170. https://doi.org/10.1038/s41534-025-01085-8",
+    "claims": [
+      "Dynamical code schedules can compete with or exceed static-code tailoring in biased settings.",
+      "Bias exploitation is not limited to a fixed stabilizer layout."
+    ],
+    "conclusions": [
+      "Scheduling choices deserve explicit study in biased-noise projects.",
+      "The paper widens the future-work space beyond static surface-code circuits."
+    ],
+    "contributions": [
+      "Extended bias tailoring from static surface codes to dynamical/Floquet codes.",
+      "Demonstrated that schedule design itself can be the primary tailoring knob."
+    ],
+    "future_work": [
+      "Compare Floquet schedules against standard surface-code repeated syndrome extraction under the same biased gate model.",
+      "Test whether dynamic scheduling improves finite-distance logical rates on practical hardware."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Not directly the standard surface code requested by the user.",
+      "Floquet decoding and implementation overheads complicate direct comparison."
+    ],
+    "source_type": "paper",
+    "summary": "Recent dynamic-code paper showing that bias tailoring extends to Floquet schedules. It matters because the user\u2019s requested syndrome-extraction circuits and schedule comparisons may eventually benefit from dynamic rather than static stabilizer layouts.",
+    "title": "Tailoring dynamical codes for biased noise: the X3Z3 Floquet code",
+    "url": "https://doi.org/10.1038/s41534-025-01085-8",
+    "year": 2025
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Craig Gidney",
+      "Stim contributors"
+    ],
+    "citation": "Gidney, C., & contributors. (2025). Stim GitHub repository. GitHub. https://github.com/quantumlib/Stim",
+    "claims": [
+      "The repository exposes the features needed for fast surface-code Monte Carlo studies.",
+      "Stim is actively maintained and widely reused in modern QEC benchmarks."
+    ],
+    "conclusions": [
+      "Strong repo candidate for the implementation phase.",
+      "Pairs naturally with PyMatching or sparse blossom."
+    ],
+    "contributions": [
+      "Provides production-quality implementations of Stim and associated tooling.",
+      "Documents detector-error-model workflows used in large-scale QEC simulation."
+    ],
+    "future_work": [
+      "Integrate repository examples into a biased-noise simulation pipeline."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Best suited to Clifford/stabilizer-compatible workflows.",
+      "Custom circuit generation still needs user-side engineering."
+    ],
+    "source_type": "code",
+    "summary": "Primary codebase for high-throughput stabilizer and detector-error-model simulation. It matters because it is the most likely engine for the requested Monte Carlo threshold sweeps if the circuits can be compiled into detector error models.",
+    "title": "Stim GitHub repository",
+    "url": "https://github.com/quantumlib/Stim",
+    "year": 2025
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Oscar Higgott",
+      "PyMatching contributors"
+    ],
+    "citation": "Higgott, O., & contributors. (2025). PyMatching GitHub repository. GitHub. https://github.com/oscarhiggott/PyMatching",
+    "claims": [
+      "PyMatching is suitable for large decoding workloads generated by stabilizer simulations.",
+      "It integrates directly with the current Stim ecosystem."
+    ],
+    "conclusions": [
+      "Strong default decoder candidate for the implementation phase.",
+      "Useful baseline before testing more specialized biased-noise decoders."
+    ],
+    "contributions": [
+      "Implements fast MWPM decoding for QEC detector graphs.",
+      "Provides a practical Python interface for Monte Carlo workflows."
+    ],
+    "future_work": [
+      "Benchmark PyMatching against sparse blossom and bias-aware alternatives on the target circuits."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Matching can underperform specialized decoders on some highly correlated biased-noise models.",
+      "Detector graph construction must still reflect the real circuit noise."
+    ],
+    "source_type": "code",
+    "summary": "Widely used matching decoder library that works directly with Stim-style detector error models. It matters because it is the lowest-friction decoder for the requested surface-code simulations.",
+    "title": "PyMatching GitHub repository",
+    "url": "https://github.com/oscarhiggott/PyMatching",
+    "year": 2025
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Qiskit contributors"
+    ],
+    "citation": "Qiskit contributors. (2025). Qiskit Aer noise model tutorials and API documentation. https://qiskit.github.io/qiskit-aer/tutorials/3_building_noise_models.html",
+    "claims": [
+      "Aer can represent custom Pauli and Kraus noise models for circuit simulation.",
+      "It is suitable for hardware-style noisy-circuit studies."
+    ],
+    "conclusions": [
+      "Aer is the main software fallback when the circuit model exceeds Stim\u2019s direct convenience.",
+      "The docs are an implementation reference, not a threshold paper."
+    ],
+    "contributions": [
+      "Documents how to build gate- and qubit-dependent noise channels in Aer.",
+      "Provides a supported path for simulation if Stim integration is inconvenient."
+    ],
+    "future_work": [
+      "Prototype biased-noise gate models in Aer and compare runtime against Stim workflows."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Large Monte Carlo sweeps may be slower than Stim-based detector workflows.",
+      "Decoder integration is less direct than with Stim/PyMatching."
+    ],
+    "source_type": "code",
+    "summary": "Official documentation for constructing custom noise models in Qiskit Aer. It matters because the user explicitly allows Qiskit Aer as an implementation path for gate-dependent and biased-noise circuit simulation.",
+    "title": "Qiskit Aer noise model tutorials and API documentation",
+    "url": "https://qiskit.github.io/qiskit-aer/tutorials/3_building_noise_models.html",
+    "year": 2025
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "James R. Wootton",
+      "qecsim contributors"
+    ],
+    "citation": "Wootton, J. R., & contributors. (2021). qecsim GitHub repository. GitHub. https://github.com/qecsim/qecsim",
+    "claims": [
+      "qecsim offers a simpler baseline simulator for QEC experiments.",
+      "The codebase can be repurposed for sanity-check studies."
+    ],
+    "conclusions": [
+      "Useful as a secondary validation tool rather than the main large-scale engine.",
+      "Helpful for decoder and logical-error regression tests."
+    ],
+    "contributions": [
+      "Provides reference code for simulating stabilizer-code error correction.",
+      "Useful for cross-checking smaller-scale threshold calculations."
+    ],
+    "future_work": [
+      "Use qecsim for small-distance spot checks against Stim or Aer outputs."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Less optimized than Stim-based workflows for very large sweeps.",
+      "May require custom extensions for the exact circuit-level bias model in scope."
+    ],
+    "source_type": "code",
+    "summary": "Open-source QEC simulator supporting surface-code style studies. It matters as a lightweight reference implementation and validation baseline for threshold calculations and decoder tests.",
+    "title": "qecsim GitHub repository",
+    "url": "https://github.com/qecsim/qecsim",
+    "year": 2021
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "PanQEC contributors"
+    ],
+    "citation": "PanQEC contributors. (2024). PanQEC documentation and repository. https://panqec.readthedocs.io",
+    "claims": [
+      "PanQEC can accelerate reproducible threshold benchmarking.",
+      "Its abstractions are useful for comparing code families under shared workflows."
+    ],
+    "conclusions": [
+      "Good candidate if the project expands beyond a single code implementation.",
+      "Most useful as infrastructure rather than as a direct literature baseline."
+    ],
+    "contributions": [
+      "Packages threshold-study workflows into a reusable software stack.",
+      "Supports experimentation across multiple code families and decoders."
+    ],
+    "future_work": [
+      "Assess whether PanQEC\u2019s abstractions fit the intended biased-noise sweep."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Integration effort is still required for custom biased circuit models.",
+      "Performance may lag specialized Stim pipelines for very large runs."
+    ],
+    "source_type": "code",
+    "summary": "Open-source platform for threshold studies across quantum codes. It matters because it already supports large threshold-sweep workflows and may reduce engineering time for benchmarking biased-noise code variants.",
+    "title": "PanQEC documentation and repository",
+    "url": "https://panqec.readthedocs.io",
+    "year": 2024
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "PECOS contributors"
+    ],
+    "citation": "PECOS contributors. (2024). PECOS GitHub repository. GitHub. https://github.com/PECOS-packages/PECOS",
+    "claims": [
+      "PECOS can support fault-tolerance studies across code families.",
+      "The software can complement custom Monte Carlo pipelines."
+    ],
+    "conclusions": [
+      "Useful as auxiliary infrastructure or for cross-validation of small studies.",
+      "Less central than Stim/PyMatching for this specific project."
+    ],
+    "contributions": [
+      "Provides tooling for performance estimation in quantum error correction.",
+      "Offers reference implementations for logical-error and syndrome-processing workflows."
+    ],
+    "future_work": [
+      "Evaluate PECOS only if existing workflows are insufficient."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "May require adaptation for the exact biased-noise surface-code circuits in scope.",
+      "Community usage is less standardized than Stim-based workflows."
+    ],
+    "source_type": "code",
+    "summary": "Open-source performance estimator for quantum fault tolerance. It matters as a comparative software resource for experiment orchestration and logical-error studies.",
+    "title": "PECOS GitHub repository",
+    "url": "https://github.com/PECOS-packages/PECOS",
+    "year": 2024
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "tesseract-decoder contributors"
+    ],
+    "citation": "tesseract-decoder contributors. (2025). tesseract-decoder GitHub repository. GitHub. https://github.com/quantumlib/tesseract-decoder",
+    "claims": [
+      "Modern industrial decoder implementations are available beyond PyMatching.",
+      "Large detector-graph decoding can be engineered efficiently in open source."
+    ],
+    "conclusions": [
+      "A plausible alternative decoder backend if matching or custom decoders become limiting.",
+      "Useful for future benchmarking rather than the first implementation pass."
+    ],
+    "contributions": [
+      "Provides another production-grade decoder implementation.",
+      "Expands the set of candidate decoders for comparative benchmarking."
+    ],
+    "future_work": [
+      "Evaluate decoder quality/runtime tradeoffs against PyMatching and sparse blossom."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Integration overhead is higher than with Stim/PyMatching defaults.",
+      "Documentation is less tightly aligned with biased-noise academic benchmarks."
+    ],
+    "source_type": "code",
+    "summary": "Google\u2019s tesseract decoder implementation is a modern decoder codebase relevant to large detector graphs. It matters as an additional reusable decoder candidate for realistic syndrome-extraction studies.",
+    "title": "tesseract-decoder GitHub repository",
+    "url": "https://github.com/quantumlib/tesseract-decoder",
+    "year": 2025
+  },
+  {
+    "assumptions": [],
+    "authors": [
+      "Rocio Martinez",
+      "project contributors"
+    ],
+    "citation": "Martinez, R., & contributors. (2025). qec-two-level-qubits-circuit-noise-bias GitHub repository. GitHub. https://github.com/IBM/qec-two-level-qubits-circuit-noise-bias",
+    "claims": [
+      "The repository can help reproduce or adapt the recent circuit-level biased-noise results.",
+      "Public code exists for a study close to the requested scope."
+    ],
+    "conclusions": [
+      "Strongest implementation starting point besides a custom Stim/Aer build.",
+      "High-priority repo candidate because of direct problem overlap."
+    ],
+    "contributions": [
+      "Publishes code aligned with a recent realistic biased-noise circuit-level study.",
+      "Provides a concrete implementation reference for two-level-qubit biased-noise schedules."
+    ],
+    "future_work": [
+      "Inspect and adapt the repository during the implementation phase if its dependencies are manageable."
+    ],
+    "key_equations": [],
+    "limitations": [
+      "Repository assumptions may be tightly coupled to the associated paper\u2019s hardware model.",
+      "Code maturity needs local validation before reuse."
+    ],
+    "source_type": "code",
+    "summary": "Companion code repository for the recent circuit-level biased-noise paper on two-level qubits. It matters because it is the closest reusable implementation to the exact project target among the located sources.",
+    "title": "qec-two-level-qubits-circuit-noise-bias GitHub repository",
+    "url": "https://github.com/IBM/qec-two-level-qubits-circuit-noise-bias",
+    "year": 2025
+  }
+]

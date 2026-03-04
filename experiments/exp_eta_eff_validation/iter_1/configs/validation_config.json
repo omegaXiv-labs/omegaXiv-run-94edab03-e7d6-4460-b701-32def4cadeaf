@@ -1,0 +1,269 @@
+{
+  "experiment_id": "exp_eta_eff_validation",
+  "iteration_index": 1,
+  "selected_path_id": "path_effective_bias_renormalization",
+  "target_hypothesis_ids": [
+    "hyp_effective_bias_renormalization",
+    "hyp_finite_size_attribution",
+    "hyp_cross_simulator_semantics",
+    "hyp_boundary_fragility_interaction"
+  ],
+  "output_dir": "experiments/exp_eta_eff_validation/iter_1",
+  "paper_dirs": {
+    "figures": "paper/figures/iter_1",
+    "tables": "paper/tables/iter_1",
+    "data": "paper/data/iter_1"
+  },
+  "math_validation_spec_path": "phase_outputs/SYMPY.md",
+  "seeds": [11, 29, 47, 71, 89],
+  "revision_controls": {
+    "source_artifact": "phase_outputs/insights_refinement.json",
+    "conditional_claim": "eta_eff is a first-order predictor when boundary fragility and backend semantic mismatch are bounded.",
+    "nuisance_parameters": [
+      "boundary_fragility_score_calibration",
+      "threshold_absolute_gap",
+      "agreement_rate_within_tolerance"
+    ],
+    "backend_semantic_confidence_band": {
+      "center_metric": "threshold_crossing_p_th",
+      "half_width_metric": "threshold_absolute_gap",
+      "minimum_agreement_rate": 0.75
+    },
+    "direct_backend_rerun_contract": {
+      "required_backends": ["stim", "qiskit_aer"],
+      "preserve_artifact_schema": true,
+      "preserve_seed_set": true,
+      "preserve_metrics": true
+    }
+  },
+  "experiments": [
+    {
+      "id": "exp_eta_eff_threshold_collapse",
+      "experiment_type": "simulation",
+      "datasets": [
+        "ds_matched_threshold_grid_v1",
+        "ds_gate_resolved_noise_budget_v1",
+        "ds_schedule_ablation_panel_v1"
+      ],
+      "benchmarks": [
+        "nominal_eta_threshold_fit",
+        "literature_ideal_curve_lookup",
+        "S_sym_only_threshold_fit",
+        "gate_averaged_bias_without_chi_temp",
+        "code_family_fixed_effect_only_fit"
+      ],
+      "metrics": [
+        "logical_error_rate_per_round",
+        "threshold_crossing_p_th",
+        "holdout_rmse_threshold_fit",
+        "leave_one_schedule_out_mae",
+        "r2_threshold_prediction",
+        "collapse_dispersion_iqr",
+        "eta_eff_vs_nominal_residual_gap"
+      ],
+      "steps": [
+        "Generate a matched threshold grid over code family, distance, eta, p, schedule, decoder, and seed.",
+        "Estimate nominal biased-Pauli components and compiled eta_eff values from schedule-aware gate budgets.",
+        "Fit nominal-eta and eta_eff threshold predictors and compare holdout errors.",
+        "Write the threshold-grid dataset, bias summary tables, and collapse figures."
+      ],
+      "success_criteria": [
+        "Eta_eff-based collapse reduces holdout RMSE by at least 20% relative to nominal eta for standard_surface and xzzx.",
+        "Collapse dispersion is lower under eta_eff in at least three of four bias settings.",
+        "The ideal-curve residuals track |eta_eff-eta| more strongly than eta alone."
+      ],
+      "sweep_params": {
+        "code_family": ["standard_surface", "xzzx", "tailored_rotated_surface", "clifford_deformed_surface"],
+        "decoder": ["pymatching_mwpm", "sparse_blossom_reference"],
+        "distance": ["3", "5", "7", "9"],
+        "eta": ["1", "5", "20", "50"],
+        "p": ["1e-4", "2e-4", "5e-4", "1e-3", "2e-3", "5e-3", "1e-2", "2e-2", "5e-2"],
+        "schedule_family": ["bias_preserving_reference", "temporal_order_swap", "measurement_reset_asymmetric", "cnot_decomposition_variant"]
+      }
+    },
+    {
+      "id": "exp_gate_class_convexity_ablation",
+      "experiment_type": "simulation",
+      "datasets": ["ds_gate_class_ablation_panel_v1", "ds_schedule_weight_table_v1"],
+      "benchmarks": [
+        "uniform_gate_weight_assumption",
+        "max_bias_gate_only_heuristic",
+        "non_z_mass_only_predictor",
+        "nominal_eta_invariant_predictor",
+        "S_sym_gate_summary_predictor"
+      ],
+      "metrics": [
+        "eta_eff_interval_violation_rate",
+        "mae_predicted_vs_observed_delta_eta_eff",
+        "gate_class_contribution_coverage",
+        "top_k_gate_class_recall",
+        "kendall_tau_predicted_vs_observed_threshold_shift"
+      ],
+      "steps": [
+        "Generate gate-family ablations over five gate classes, three ablation modes, four distances, four eta values, and five seeds.",
+        "Compute alpha_g, r_g, and chi_temp alpha_g r_g contributions.",
+        "Audit interval-bound compliance and benchmark predictors of delta eta_eff."
+      ],
+      "success_criteria": [
+        "The convex-mixture interval bound has zero empirical violations.",
+        "The top-2 gate classes explain at least 70% of the absolute eta_eff shift in each ablation family.",
+        "The convex-mixture predictor improves delta-eta_eff MAE by at least 25% relative to the weakest baselines."
+      ],
+      "sweep_params": {
+        "distance": ["3", "5", "7", "9"],
+        "eta": ["1", "5", "20", "50"],
+        "gate_family_ablated": ["cnot", "measurement", "reset", "idle", "single_qubit_clifford"],
+        "ablation_mode": ["replace_with_reference_channel", "amplify_non_z_mass_2x", "swap_decomposition"]
+      }
+    },
+    {
+      "id": "exp_schedule_sensitivity_transfer",
+      "experiment_type": "simulation",
+      "datasets": ["ds_one_factor_schedule_ablations_v1", "ds_threshold_transfer_holdout_v1"],
+      "benchmarks": [
+        "nominal_eta_threshold_predictor",
+        "schedule_family_fixed_effect_predictor",
+        "finite_difference_without_chi_temp",
+        "local_affine_nominal_eta_predictor",
+        "S_sym_residual_predictor"
+      ],
+      "metrics": [
+        "derivative_sign_accuracy",
+        "holdout_threshold_rmse",
+        "bound_coverage_rate",
+        "median_absolute_threshold_residual",
+        "epsilon_model_estimate",
+        "schedule_ablation_effect_size"
+      ],
+      "steps": [
+        "Generate one-factor perturbations in temporal order, reset asymmetry, CNOT decomposition, and idle padding.",
+        "Compare predicted and observed eta_eff directional derivatives.",
+        "Evaluate the transfer bound K|eta_eff-eta|+epsilon_model on held-out schedules."
+      ],
+      "success_criteria": [
+        "Derivative sign accuracy is at least 80%.",
+        "Replacing nominal eta with eta_eff lowers holdout RMSE by at least 20%.",
+        "The empirical transfer residual stays within the fitted bound for at least 90% of held-out points."
+      ],
+      "sweep_params": {
+        "distance": ["3", "5", "7", "9"],
+        "eta": ["1", "5", "20", "50"],
+        "schedule_factor": ["temporal_order", "measurement_reset_asymmetry", "cnot_decomposition", "idle_padding"],
+        "perturbation_level": ["-1", "0", "+1"]
+      }
+    },
+    {
+      "id": "exp_finite_size_attribution",
+      "experiment_type": "simulation",
+      "datasets": [
+        "ds_distance_sweep_threshold_grid_v1",
+        "ds_finite_size_bootstrap_v1",
+        "ds_decoder_schedule_covariates_v1"
+      ],
+      "benchmarks": [
+        "pairwise_crossing_estimator",
+        "asymptotic_only_scaling_fit",
+        "finite_size_no_decoder_term_model",
+        "finite_size_no_schedule_term_model",
+        "decoder_schedule_penalty_only_model"
+      ],
+      "metrics": [
+        "heldout_negative_log_likelihood",
+        "waic",
+        "bootstrap_ci_width_p_th_infinity",
+        "anti_threshold_detection_recall",
+        "residual_rmse_by_distance",
+        "penalty_term_stability"
+      ],
+      "steps": [
+        "Generate finite-distance logical-rate grids and bootstrap resamples.",
+        "Compare naive pairwise crossings to a hierarchical finite-size attribution model.",
+        "Write threshold, penalty, and model comparison tables plus supporting figures."
+      ],
+      "success_criteria": [
+        "The hierarchical model improves held-out negative log-likelihood by at least 15%.",
+        "Removing decoder or schedule penalties worsens WAIC by at least 5 points.",
+        "The bootstrap 95% interval width for p_th_infinity stays below 0.01 in at least three of four bias settings."
+      ],
+      "sweep_params": {
+        "distance": ["3", "5", "7", "9"],
+        "eta": ["1", "5", "20", "50"],
+        "decoder_condition": ["pymatching_mwpm", "sparse_blossom_reference", "near_ml_small_scale_reference"],
+        "schedule_condition": ["bias_preserving_reference", "fragile_boundary_schedule", "temporal_order_swap"]
+      }
+    },
+    {
+      "id": "exp_cross_simulator_semantics",
+      "experiment_type": "simulation",
+      "datasets": ["ds_aer_stim_matched_semantics_v1", "ds_detector_event_fit_ablation_v1"],
+      "benchmarks": [
+        "first_order_detector_fit",
+        "pauli_twirled_projection",
+        "iid_detector_projection",
+        "stim_direct_reference_schedule_only",
+        "decoder_mismatch_uncontrolled_workflow"
+      ],
+      "metrics": [
+        "logical_error_relative_error",
+        "threshold_absolute_gap",
+        "detector_marginal_total_variation",
+        "detector_pair_kl_divergence",
+        "runtime_speedup_vs_aer",
+        "agreement_rate_within_tolerance"
+      ],
+      "steps": [
+        "Generate matched Aer and Stim surrogate outcomes with first- and second-order detector translations.",
+        "Benchmark parity, detector discrepancy, threshold gap, and runtime speedup.",
+        "Write parity figures and backend agreement tables."
+      ],
+      "success_criteria": [
+        "The second-order translation yields median logical-error relative error at or below 10% for low- and medium-fragility schedules.",
+        "The threshold absolute gap stays below 0.2 percentage points on at least 75% of matched configurations.",
+        "The second-order translation improves detector-pair KL divergence by at least 30% relative to first order."
+      ],
+      "sweep_params": {
+        "distance": ["3", "5", "7", "9"],
+        "eta": ["1", "5", "20", "50"],
+        "translation_order": ["first_order", "second_order"],
+        "schedule_regime": ["reference", "measurement_asymmetric", "temporal_fragile"]
+      }
+    },
+    {
+      "id": "exp_boundary_fragility_interaction",
+      "experiment_type": "simulation",
+      "datasets": ["ds_boundary_variant_panel_v1", "ds_boundary_schedule_interaction_v1"],
+      "benchmarks": [
+        "code_family_only_regression",
+        "code_family_plus_log_eta_regression",
+        "schedule_only_regression",
+        "boundary_fragility_agnostic_model",
+        "xzzx_reference_boundary_vs_standard_reference_boundary"
+      ],
+      "metrics": [
+        "interaction_term_significance",
+        "logical_error_ratio_standard_over_xzzx",
+        "heldout_rmse_logical_error",
+        "boundary_fragility_score_calibration",
+        "collapse_point_b_frag",
+        "finite_distance_advantage_retention"
+      ],
+      "steps": [
+        "Generate matched boundary variants for standard_surface and xzzx across bias, distance, and schedule conditions.",
+        "Fit the interaction model linking code family, log eta, and boundary fragility.",
+        "Write interaction figures and coefficient tables with uncertainty."
+      ],
+      "success_criteria": [
+        "The interaction term beta_5 is positive with a 95% confidence interval that excludes zero in at least one high-bias regime.",
+        "The interaction model lowers held-out RMSE by at least 15% relative to the fragility-agnostic baseline.",
+        "The finite-distance XZZX advantage retention drops monotonically with boundary fragility in at least two bias settings."
+      ],
+      "sweep_params": {
+        "code_family": ["standard_surface", "xzzx"],
+        "distance": ["3", "5", "7", "9"],
+        "eta": ["1", "5", "20", "50"],
+        "boundary_variant": ["bias_preserving_reference", "fragile_boundary_a", "fragile_boundary_b"],
+        "schedule_variant": ["reference", "time_order_shift", "reset_heavy"]
+      }
+    }
+  ]
+}
