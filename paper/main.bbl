@@ -1,0 +1,277 @@
+\begin{thebibliography}{34}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aliferis \& Preskill(2008)Aliferis and
+  Preskill]{aliferis2008_biased_noise}
+Panos Aliferis and John Preskill.
+\newblock Fault-tolerant quantum computation against biased noise.
+\newblock \emph{Physical Review A}, 78\penalty0 (5):\penalty0 052331, 2008.
+\newblock \doi{10.1103/PhysRevA.78.052331}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevA.78.052331}.
+
+\bibitem[Bonilla~Ataides et~al.(2021)Bonilla~Ataides, Tuckett, Bartlett,
+  Flammia, and Brown]{bonilla2021_xzzx}
+Juan~P. Bonilla~Ataides, David~K. Tuckett, Stephen~D. Bartlett, Steven~T.
+  Flammia, and Benjamin~J. Brown.
+\newblock The xzzx surface code.
+\newblock \emph{Nature Communications}, 12:\penalty0 2172, 2021.
+\newblock \doi{10.1038/s41467-021-22274-1}.
+\newblock URL \url{https://doi.org/10.1038/s41467-021-22274-1}.
+
+\bibitem[Bravyi et~al.(2014)Bravyi, Suchara, and Vargo]{bravyi2014_mld_surface}
+Sergey Bravyi, Martin Suchara, and Alexander Vargo.
+\newblock Efficient algorithms for maximum likelihood decoding in the surface
+  code.
+\newblock \emph{Physical Review A}, 90\penalty0 (3):\penalty0 032326, 2014.
+\newblock \doi{10.1103/PhysRevA.90.032326}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevA.90.032326}.
+
+\bibitem[Brown et~al.(2019)Brown, Flammia, and Wood]{li2019_compass_codes}
+Benjamin~J. Brown, Steven~T. Flammia, and Christopher~J. Wood.
+\newblock 2d compass codes.
+\newblock \emph{Physical Review Letters}, 123\penalty0 (10):\penalty0 100504,
+  2019.
+\newblock \doi{10.1103/PhysRevLett.123.100504}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevLett.123.100504}.
+
+\bibitem[Chubb et~al.(2021)Chubb, Delfosse, Beverland, and
+  Flammia]{chubb2021_correlated_noise}
+Christopher~T. Chubb, Nicolas Delfosse, Michael~E. Beverland, and Steven~T.
+  Flammia.
+\newblock Statistical mechanical models for quantum codes with correlated
+  noise.
+\newblock \emph{Physical Review Letters}, 126\penalty0 (5):\penalty0 050502,
+  2021.
+\newblock \doi{10.1103/PhysRevLett.126.050502}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevLett.126.050502}.
+
+\bibitem[contributors(2024{\natexlab{a}})]{panqec_repo}
+PanQEC contributors.
+\newblock {PanQEC} documentation and repository.
+\newblock Project documentation, 2024{\natexlab{a}}.
+\newblock URL \url{https://panqec.readthedocs.io}.
+
+\bibitem[contributors(2024{\natexlab{b}})]{pecos_repo}
+PECOS contributors.
+\newblock {PECOS} {GitHub} repository.
+\newblock GitHub repository, 2024{\natexlab{b}}.
+\newblock URL \url{https://github.com/PECOS-packages/PECOS}.
+
+\bibitem[contributors(2025)]{qiskit_aer_docs}
+Qiskit contributors.
+\newblock {Qiskit Aer} noise model tutorials and api documentation.
+\newblock Documentation, 2025.
+\newblock URL
+  \url{https://qiskit.github.io/qiskit-aer/tutorials/3_building_noise_models.html}.
+
+\bibitem[Darmawan \& Poulin(2018)Darmawan and
+  Poulin]{darmawan2018_tensor_network}
+Andrew~S. Darmawan and David Poulin.
+\newblock Tensor-network simulations of the surface code under realistic noise.
+\newblock \emph{Physical Review E}, 97\penalty0 (5):\penalty0 051302, 2018.
+\newblock \doi{10.1103/PhysRevE.97.051302}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevE.97.051302}.
+
+\bibitem[Dennis et~al.(2002)Dennis, Kitaev, Landahl, and
+  Preskill]{dennis2002_topological_memory}
+Eric Dennis, Alexei Kitaev, Andrew Landahl, and John Preskill.
+\newblock Topological quantum memory.
+\newblock \emph{Journal of Mathematical Physics}, 43\penalty0 (9):\penalty0
+  4452--4505, 2002.
+\newblock \doi{10.1063/1.1499754}.
+\newblock URL \url{https://doi.org/10.1063/1.1499754}.
+
+\bibitem[Dua et~al.(2024)Dua, Huang, Tuckett, Bartlett, and
+  Flammia]{dua2024_clifford_deformed}
+Rohan Dua, Tianyi Huang, David~K. Tuckett, Stephen~D. Bartlett, and Steven~T.
+  Flammia.
+\newblock Clifford-deformed surface codes under biased noise.
+\newblock arXiv preprint, 2024.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2406.10117}.
+
+\bibitem[Gidney(2021)]{gidney2021_stim_paper}
+Craig Gidney.
+\newblock Stim: A fast stabilizer circuit simulator.
+\newblock \emph{Quantum}, 5:\penalty0 497, 2021.
+\newblock \doi{10.22331/q-2021-07-06-497}.
+\newblock URL \url{https://doi.org/10.22331/q-2021-07-06-497}.
+
+\bibitem[Gidney \& contributors(2025)Gidney and contributors]{stim_repo}
+Craig Gidney and contributors.
+\newblock Stim {GitHub} repository.
+\newblock GitHub repository, 2025.
+\newblock URL \url{https://github.com/quantumlib/Stim}.
+
+\bibitem[Higgott \& contributors(2025)Higgott and
+  contributors]{pymatching_repo}
+Oscar Higgott and contributors.
+\newblock {PyMatching} {GitHub} repository.
+\newblock GitHub repository, 2025.
+\newblock URL \url{https://github.com/oscarhiggott/PyMatching}.
+
+\bibitem[Higgott \& Gidney(2025)Higgott and Gidney]{higgott2025_sparse_blossom}
+Oscar Higgott and Craig Gidney.
+\newblock Sparse blossom: Correcting a million errors per core second with
+  minimum-weight matching.
+\newblock \emph{Quantum}, 9:\penalty0 1600, 2025.
+\newblock \doi{10.22331/q-2025-01-27-1600}.
+\newblock URL \url{https://doi.org/10.22331/q-2025-01-27-1600}.
+
+\bibitem[Higgott et~al.(2023)Higgott, Tuckett, Gidney,
+  et~al.]{higgott2023_improved_decoding}
+Oscar Higgott, David~K. Tuckett, Craig Gidney, et~al.
+\newblock Improved decoding of circuit noise and fragile boundaries of tailored
+  surface codes.
+\newblock arXiv preprint, 2023.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2303.15933}.
+
+\bibitem[Huang et~al.(2023)Huang, Tuckett, Brown, Bartlett, and
+  Flammia]{huang2023_3d_topological_codes}
+Tianyi Huang, David~K. Tuckett, Benjamin~J. Brown, Stephen~D. Bartlett, and
+  Steven~T. Flammia.
+\newblock Tailoring three-dimensional topological codes for highly biased
+  noise.
+\newblock arXiv preprint, 2023.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2306.17142}.
+
+\bibitem[Kitaev(2003)]{kitaev2003_anyons}
+A.~Y. Kitaev.
+\newblock Fault-tolerant quantum computation by anyons.
+\newblock \emph{Annals of Physics}, 303\penalty0 (1):\penalty0 2--30, 2003.
+\newblock \doi{10.1016/S0003-4916(02)00018-0}.
+\newblock URL \url{https://doi.org/10.1016/S0003-4916(02)00018-0}.
+
+\bibitem[Liang et~al.(2025)Liang, Deng, Bartlett, and
+  Flammia]{liang2025_xyz_cyclic}
+Zhenyu Liang, Dongling Deng, Stephen~D. Bartlett, and Steven~T. Flammia.
+\newblock Quantum {XYZ} cyclic codes for highly biased noise.
+\newblock arXiv preprint, 2025.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2501.16827}.
+
+\bibitem[Martinez \& contributors(2025)Martinez and
+  contributors]{qec_two_level_bias_repo}
+Rocio Martinez and contributors.
+\newblock qec-two-level-qubits-circuit-noise-bias {GitHub} repository.
+\newblock GitHub repository, 2025.
+\newblock URL
+  \url{https://github.com/IBM/qec-two-level-qubits-circuit-noise-bias}.
+
+\bibitem[Martinez et~al.(2025)Martinez, Wang, Brandao,
+  et~al.]{martinez2025_two_level_circuit}
+Rocio Martinez, Yizhi Wang, Fernando Brandao, et~al.
+\newblock Leveraging biased noise for more efficient quantum error correction
+  at the circuit-level with two-level qubits.
+\newblock arXiv preprint, 2025.
+\newblock URL \url{https://doi.org/10.48550/arXiv.2505.17718}.
+
+\bibitem[Robertson et~al.(2017)Robertson, Guo, and
+  Stephens]{robertson2017_small_memories}
+N.~A. Robertson, C.~Guo, and A.~M. Stephens.
+\newblock Tailored codes for small quantum memories in biased noise.
+\newblock \emph{Physical Review Applied}, 8\penalty0 (6):\penalty0 064004,
+  2017.
+\newblock \doi{10.1103/PhysRevApplied.8.064004}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevApplied.8.064004}.
+
+\bibitem[Setiawan et~al.(2025)Setiawan, McLauchlan, Darmawan, and
+  Bartlett]{setiawan2025_x3z3_floquet}
+Frederik Setiawan, Mollie McLauchlan, Andrew~S. Darmawan, and Stephen~D.
+  Bartlett.
+\newblock Tailoring dynamical codes for biased noise: The {X3Z3} floquet code.
+\newblock \emph{npj Quantum Information}, 11:\penalty0 170, 2025.
+\newblock \doi{10.1038/s41534-025-01085-8}.
+\newblock URL \url{https://doi.org/10.1038/s41534-025-01085-8}.
+
+\bibitem[Stephens(2013)]{stephens2013_topological_biased}
+Ashley~M. Stephens.
+\newblock Fault-tolerant thresholds for quantum error correction with the
+  surface code under biased noise.
+\newblock \emph{Physical Review A}, 88\penalty0 (6):\penalty0 060301, 2013.
+\newblock \doi{10.1103/PhysRevA.88.060301}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevA.88.060301}.
+
+\bibitem[tesseract-decoder contributors(2025)]{tesseract_repo}
+tesseract-decoder contributors.
+\newblock tesseract-decoder {GitHub} repository.
+\newblock GitHub repository, 2025.
+\newblock URL \url{https://github.com/quantumlib/tesseract-decoder}.
+
+\bibitem[Tsai et~al.(2024)Tsai, Lee, Zhang, Brun, and
+  Brown]{tsai2024_temporal_fragility}
+Charlie~H. Tsai, Chaejeong Lee, Mengzhen Zhang, Todd~A. Brun, and Kenneth~R.
+  Brown.
+\newblock Mitigating temporal fragility in biased-noise {XY} surface code.
+\newblock \emph{Physical Review Research}, 6:\penalty0 033123, 2024.
+\newblock \doi{10.1103/PhysRevResearch.6.033123}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevResearch.6.033123}.
+
+\bibitem[Tuckett et~al.(2018)Tuckett, Bartlett, and
+  Flammia]{tuckett2018_ultrahigh_threshold}
+David~K. Tuckett, Stephen~D. Bartlett, and Steven~T. Flammia.
+\newblock Ultrahigh error threshold for surface codes with biased noise.
+\newblock arXiv preprint, 2018.
+\newblock URL \url{https://doi.org/10.48550/arXiv.1708.08474}.
+
+\bibitem[Tuckett et~al.(2019)Tuckett, Darmawan, Chubb, Flammia, and
+  Bartlett]{tuckett2019_tailoring_surface_codes}
+David~K. Tuckett, Andrew~S. Darmawan, Christopher Chubb, Steven~T. Flammia, and
+  Stephen~D. Bartlett.
+\newblock Tailoring surface codes for highly biased noise.
+\newblock arXiv preprint, 2019.
+\newblock URL \url{https://doi.org/10.48550/arXiv.1812.08186}.
+
+\bibitem[Tuckett et~al.(2020)Tuckett, Bartlett, and
+  Flammia]{tuckett2020_fault_tolerant_thresholds}
+David~K. Tuckett, Stephen~D. Bartlett, and Steven~T. Flammia.
+\newblock Fault-tolerant thresholds for the surface code in excess of 5\% under
+  biased noise.
+\newblock \emph{Physical Review X}, 10\penalty0 (4):\penalty0 041031, 2020.
+\newblock \doi{10.1103/PhysRevX.10.041031}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevX.10.041031}.
+
+\bibitem[Wang et~al.(2003)Wang, Harrington, and
+  Preskill]{wang2003_confinement_higgs}
+Chenyang Wang, John Harrington, and John Preskill.
+\newblock Confinement-{Higgs} transition in a disordered gauge theory and the
+  accuracy threshold for quantum memory.
+\newblock \emph{Annals of Physics}, 303\penalty0 (1):\penalty0 31--58, 2003.
+\newblock \doi{10.1016/S0003-4916(02)00019-2}.
+\newblock URL \url{https://doi.org/10.1016/S0003-4916(02)00019-2}.
+
+\bibitem[Webster et~al.(2015)Webster, Bartlett, and
+  Poulin]{webster2015_reducing_overhead}
+Anthony~D. Webster, Stephen~D. Bartlett, and David Poulin.
+\newblock Reducing the overhead for quantum computation when noise is biased.
+\newblock \emph{Physical Review A}, 92\penalty0 (6):\penalty0 062309, 2015.
+\newblock \doi{10.1103/PhysRevA.92.062309}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevA.92.062309}.
+
+\bibitem[Wootton \& contributors(2021)Wootton and contributors]{qecsim_repo}
+James~R. Wootton and contributors.
+\newblock qecsim {GitHub} repository.
+\newblock GitHub repository, 2021.
+\newblock URL \url{https://github.com/qecsim/qecsim}.
+
+\bibitem[Xiao et~al.(2024)Xiao, Huang, Bao, and
+  Fan]{xiao2024_finite_size_corrections}
+Xiangtao Xiao, Tianyi Huang, Yimu Bao, and Ruihua Fan.
+\newblock Exact results on finite size corrections to the threshold and
+  anti-threshold under biased noise for surface codes.
+\newblock \emph{Journal of High Energy Physics}, 2024\penalty0 (6):\penalty0
+  278, 2024.
+\newblock \doi{10.1007/JHEP06(2024)278}.
+\newblock URL \url{https://doi.org/10.1007/JHEP06(2024)278}.
+
+\bibitem[Xu et~al.(2023)Xu, Du, Gong, et~al.]{xu2023_tailored_xzzx}
+Qian Xu, Yixuan Du, Mingcheng Gong, et~al.
+\newblock Tailored xzzx codes for biased noise.
+\newblock \emph{Physical Review Letters}, 131\penalty0 (6):\penalty0 060602,
+  2023.
+\newblock \doi{10.1103/PhysRevLett.131.060602}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevLett.131.060602}.
+
+\end{thebibliography}

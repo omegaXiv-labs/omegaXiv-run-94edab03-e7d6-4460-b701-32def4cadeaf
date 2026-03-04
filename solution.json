@@ -1,0 +1,140 @@
+{
+  "abstract": "We evaluate thresholds for the surface code under biased noise models using realistic gate decompositions and circuit scheduling. We compare analytical bounds with Monte Carlo simulations and quantify logical error rates across code distances.",
+  "artifacts": [
+    {
+      "kind": "github_repo",
+      "label": "GitHub Repo",
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf"
+    },
+    {
+      "kind": "paper_pdf",
+      "label": "Paper PDF",
+      "uri": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf/main/paper/main.pdf"
+    },
+    {
+      "kind": "latex_sources",
+      "label": "LaTeX Sources",
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf/blob/main/paper/main.tex"
+    },
+    {
+      "kind": "sources",
+      "label": "Sources",
+      "uri": "https://github.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf/blob/main/sources/sources.json"
+    }
+  ],
+  "compute_budget": "TBD",
+  "constraints": [
+    "Use Qiskit Aer or Stim if available for simulation",
+    "Model dephasing-biased (Z-dominant) and gate-dependent noise",
+    "Estimate logical error rates for code distances d in {3,5,7,9}",
+    "Evaluate bias ratios eta in {1, 5, 20, 50}",
+    "Sweep physical error rates p in [1e-4, 5e-2]",
+    "Compare simulation results against theoretical predictions and prior state-of-the-art results",
+    "Document limitations and mismatches",
+    "Target deadline: 2026-03-04"
+  ],
+  "context_id": "067c54d8-3f86-4240-a6a9-60876ce3681d",
+  "created_at": "2026-03-04T12:49:23.552132+00:00",
+  "difficulty": "Frontier",
+  "domain": "Quantum Information",
+  "expected_artifacts": [
+    "Paper",
+    "Code"
+  ],
+  "full_description": "Study the surface code under noise models with dephasing bias (Z-dominant) and gate-dependent error rates. Derive expected threshold behavior from literature and implement simulations to estimate logical error rates for distances d \u2208 {3,5,7,9}. Use Qiskit Aer (or Stim if available) to build circuits for repeated syndrome extraction with lattice surgery style checks. For each bias ratio \u03b7 \u2208 {1, 5, 20, 50} and physical error p \u2208 [1e-4, 5e-2], estimate logical error per round and fit threshold curves. Compare against theoretical predictions and prior SOTA results; document limitations and mismatches.",
+  "goals": [
+    "Evaluate surface-code thresholds under biased noise models with realistic gate decompositions and circuit scheduling",
+    "Derive expected threshold behavior from literature",
+    "Implement Monte Carlo simulations for repeated syndrome extraction circuits",
+    "Estimate logical error per round for code distances d in {3,5,7,9}",
+    "Fit threshold curves across bias ratios eta in {1, 5, 20, 50} and physical error rates p in [1e-4, 5e-2]",
+    "Compare simulation outcomes with theoretical predictions and prior state-of-the-art results",
+    "Document limitations and mismatches between theory and simulation"
+  ],
+  "key_terms": [
+    "surface code",
+    "biased noise",
+    "dephasing bias",
+    "Z-dominant noise",
+    "gate-dependent error rates",
+    "realistic gate decompositions",
+    "circuit scheduling",
+    "Monte Carlo simulations",
+    "logical error rate",
+    "threshold curves",
+    "Qiskit Aer",
+    "Stim",
+    "repeated syndrome extraction",
+    "lattice surgery",
+    "code distance",
+    "quantum error correction"
+  ],
+  "original_problem": {
+    "compute_budget": "TBD",
+    "constraints": [
+      "Use Qiskit Aer or Stim if available for simulation",
+      "Model dephasing-biased (Z-dominant) and gate-dependent noise",
+      "Estimate logical error rates for code distances d in {3,5,7,9}",
+      "Evaluate bias ratios eta in {1, 5, 20, 50}",
+      "Sweep physical error rates p in [1e-4, 5e-2]",
+      "Compare simulation results against theoretical predictions and prior state-of-the-art results",
+      "Document limitations and mismatches",
+      "Target deadline: 2026-03-04"
+    ],
+    "difficulty": "Frontier",
+    "domain": "Quantum Information",
+    "expected_artifacts": [
+      "Paper",
+      "Code"
+    ],
+    "full_description": "Study the surface code under noise models with dephasing bias (Z-dominant) and gate-dependent error rates. Derive expected threshold behavior from literature and implement simulations to estimate logical error rates for distances d \u2208 {3,5,7,9}. Use Qiskit Aer (or Stim if available) to build circuits for repeated syndrome extraction with lattice surgery style checks. For each bias ratio \u03b7 \u2208 {1, 5, 20, 50} and physical error p \u2208 [1e-4, 5e-2], estimate logical error per round and fit threshold curves. Compare against theoretical predictions and prior SOTA results; document limitations and mismatches.",
+    "goals": [
+      "Evaluate surface-code thresholds under biased noise models with realistic gate decompositions and circuit scheduling",
+      "Derive expected threshold behavior from literature",
+      "Implement Monte Carlo simulations for repeated syndrome extraction circuits",
+      "Estimate logical error per round for code distances d in {3,5,7,9}",
+      "Fit threshold curves across bias ratios eta in {1, 5, 20, 50} and physical error rates p in [1e-4, 5e-2]",
+      "Compare simulation outcomes with theoretical predictions and prior state-of-the-art results",
+      "Document limitations and mismatches between theory and simulation"
+    ],
+    "key_terms": [
+      "surface code",
+      "biased noise",
+      "dephasing bias",
+      "Z-dominant noise",
+      "gate-dependent error rates",
+      "realistic gate decompositions",
+      "circuit scheduling",
+      "Monte Carlo simulations",
+      "logical error rate",
+      "threshold curves",
+      "Qiskit Aer",
+      "Stim",
+      "repeated syndrome extraction",
+      "lattice surgery",
+      "code distance",
+      "quantum error correction"
+    ],
+    "problem_type": "Open Question",
+    "request_text": "Title: Noise-Biased Surface Code Thresholds Under Realistic Gate Sets\nAbstract: We evaluate thresholds for the surface code under biased noise models using realistic gate decompositions and circuit scheduling. We compare analytical bounds with Monte Carlo simulations and quantify logical error rates across code distances.\nFull Description: Study the surface code under noise models with dephasing bias (Z-dominant) and gate-dependent error rates. Derive expected threshold behavior from literature and implement simulations to estimate logical error rates for distances d \u2208 {3,5,7,9}. Use Qiskit Aer (or Stim if available) to build circuits for repeated syndrome extraction with lattice surgery style checks. For each bias ratio \u03b7 \u2208 {1, 5, 20, 50} and physical error p \u2208 [1e-4, 5e-2], estimate logical error per round and fit threshold curves. Compare against theoretical predictions and prior SOTA results; document limitations and mismatches.\nProblem Type: Open Question\nDifficulty: Frontier\nDomain: Quantum Information\nOriginator: Admin Curator\nCompute Budget: TBD\nTarget Deadline: 2026-03-04\nTags: quantum, error correction\nCategories: Quantum Information\nExpected Artifacts: Paper, Code\nRelated Links: None\nDataset Links: None",
+    "tags": [
+      "quantum",
+      "error correction"
+    ],
+    "target_deadline": "2026-03-04"
+  },
+  "paper_pdf_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf/main/paper/main.pdf",
+  "pipeline_id": "067c54d8-3f86-4240-a6a9-60876ce3681d",
+  "problem_type": "Open Question",
+  "repo_url": "https://github.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf",
+  "request_text": "Title: Noise-Biased Surface Code Thresholds Under Realistic Gate Sets\nAbstract: We evaluate thresholds for the surface code under biased noise models using realistic gate decompositions and circuit scheduling. We compare analytical bounds with Monte Carlo simulations and quantify logical error rates across code distances.\nFull Description: Study the surface code under noise models with dephasing bias (Z-dominant) and gate-dependent error rates. Derive expected threshold behavior from literature and implement simulations to estimate logical error rates for distances d \u2208 {3,5,7,9}. Use Qiskit Aer (or Stim if available) to build circuits for repeated syndrome extraction with lattice surgery style checks. For each bias ratio \u03b7 \u2208 {1, 5, 20, 50} and physical error p \u2208 [1e-4, 5e-2], estimate logical error per round and fit threshold curves. Compare against theoretical predictions and prior SOTA results; document limitations and mismatches.\nProblem Type: Open Question\nDifficulty: Frontier\nDomain: Quantum Information\nOriginator: Admin Curator\nCompute Budget: TBD\nTarget Deadline: 2026-03-04\nTags: quantum, error correction\nCategories: Quantum Information\nExpected Artifacts: Paper, Code\nRelated Links: None\nDataset Links: None",
+  "run_id": "94edab03-e7d6-4460-b701-32def4cadeaf",
+  "session_id": "067c54d8-3f86-4240-a6a9-60876ce3681d",
+  "tags": [
+    "quantum",
+    "error correction"
+  ],
+  "target_deadline": "2026-03-04",
+  "title": "Noise-Biased Surface Code Thresholds Under Realistic Gate Sets",
+  "updated_at": "2026-03-04T13:44:44.776513+00:00"
+}
