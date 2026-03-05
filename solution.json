@@ -124,6 +124,7 @@
     "target_deadline": "2026-03-04"
   },
   "paper_pdf_url": "https://raw.githubusercontent.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf/main/paper/main.pdf",
+  "paper_thumbnail_url": null,
   "pipeline_id": "067c54d8-3f86-4240-a6a9-60876ce3681d",
   "problem_type": "Open Question",
   "repo_url": "https://github.com/omegaXiv-labs/omegaXiv-run-94edab03-e7d6-4460-b701-32def4cadeaf",
@@ -136,5 +137,5 @@
   ],
   "target_deadline": "2026-03-04",
   "title": "Noise-Biased Surface Code Thresholds Under Realistic Gate Sets",
-  "updated_at": "2026-03-04T15:58:10.313632+00:00"
+  "updated_at": "2026-03-04T22:56:52.721203+00:00"
 }
