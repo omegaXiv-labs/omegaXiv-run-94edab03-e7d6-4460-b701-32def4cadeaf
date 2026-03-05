@@ -7,5 +7,6 @@
   "paper_figures": "paper/figures",
   "paper_pdf": "paper/main.pdf",
   "paper_tables": "paper/tables",
+  "paper_thumbnail": null,
   "sources": "sources/sources.json"
 }
