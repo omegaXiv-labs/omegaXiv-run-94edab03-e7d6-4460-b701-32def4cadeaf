@@ -1,0 +1,12 @@
+{
+  "code": [],
+  "experiments": "experiments",
+  "knowledge": "knowledge",
+  "latex_sources": "paper/main.tex",
+  "paper_data": "paper/data",
+  "paper_figures": "paper/figures",
+  "paper_pdf": "paper/main.pdf",
+  "paper_tables": "paper/tables",
+  "paper_thumbnail": null,
+  "sources": "sources/sources.json"
+}
